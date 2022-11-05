@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rgb(176, 214, 247);
+            }
+            button{
+                padding: 10px 30px;
+                margin: 10px 0px;
+                color: green;
+                font-weight:600;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/user/add" method="post">
+        <div>
+            <h1>Form Page</h1>
+            <div>
+                <label for="fname">Name:</label>
+                <div>
+                    <input type="text" id="fullname" name="fname"/>
+                </div>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <div>
+                    <input type="email" id="email" name="email"/>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

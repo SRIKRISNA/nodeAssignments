@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Add Users Data</title>
+        <style>
+            body{
+                background-color: rgb(252, 155, 155);
+            }
+            table {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                margin: 30px 0;
+            }
+            td, th {
+                border: 1px solid gray;
+                text-align: left;
+                padding: 10px;
+            }
+            tr:nth-child(even) {
+                background-color: rgb(254, 255, 238);
+            }
+            tr:nth-child(odd) {
+                background-color: rgb(238, 255, 240);
+            }
+        </style>
+    </head>
+    <!-- <body>
+        <h2>Dummy Users</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Profession</th>
+            </tr>
+            <% users.map((ele)=>{%>
+                <tr>
+                    <td><%= ele.username %></td>
+                    <td><%= ele.useremail %></td>
+                    <td><%= ele.userage %></td>
+                    <td><%= ele.usercity %></td>
+                    <td><%= ele.userprofile %></td>
+                </tr>
+            <% }) %>
+        </table>
+        <a href="form">Add User</a>
+    </body> -->
+    <body>
+        <div>
+            <h1 style="text-align:center">Dummy Users</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Profession</th>
+                </tr>
+                <% for(let i=0;i<users.length;i++) {%>
+                    <tr>
+                        <td><%= users[i].fullname%></td>
+                        <td><%= users[i].email%></td>
+                        <td><%= users[i].age%></td>
+                        <td><%= users[i].city%></td>
+                        <td><%= users[i].profession%></td>
+                    </tr>
+                <% } %>
+            </table>
+            <a href="/form">Add User</a>
+        </div>
+    </body>
+</html>

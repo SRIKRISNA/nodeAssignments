@@ -1,0 +1,19 @@
+{
+  "name": "nodeassignment-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon/express server.js"
+  },
+  "author": "Srikrishna",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.4.4",
+    "nodemon": "^2.0.18"
+  }
+}

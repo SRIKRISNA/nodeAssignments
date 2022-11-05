@@ -1,0 +1,36 @@
+read by cmd:
+    
+    //commandLine arguments, reading name as argument here
+    var name = process.argv;
+    //var Lname = process.argv.slice(3);
+    //console.log(name)
+    console.log(`Hello ${name[2]}`);
+    console.log(`Hello ${name.splice(2)}`);
+
+        //Run as : node file_name.js krishna
+        //output: hello krishna
+
+read user data:
+    //access by user data from enviornmental var by cmd
+    const USERNAME = process.env.USERNAME;
+    console.log(`Hello ${USERNAME}`);
+    //console.log(process.env);
+    //console.log(process.argv);
+        
+        //run cmd : node fileName.js
+        //output: Hello Srikrishna
+
+//ask name from cmd n print
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+readline.question(`Please Enter your name : `, (name) => {
+  console.log(`Hello ${name}`);
+  readline.close();
+});
+
+        //run by cmd: node fileName.js
+        //output: Please Enter your name : Srikrishna
+        // Hello Srikrishna

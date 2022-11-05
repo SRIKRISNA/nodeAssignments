@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Add Users Data</title>
+        <style>
+            .card {
+                border: 1px solid gray;
+                text-align: left;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            button{
+                padding: 7px 30px;
+                margin: 07px 0px;
+                color: rgb(255, 255, 255);
+                border-radius: 30px;
+                border: none;
+            }
+            form{
+                display: inline-block;
+            }
+            .del_btn{
+                background-color: red;
+            }
+            .prom_btn{
+                background-color: green;
+            }
+            .primary {
+                color: green;
+            }
+            .secondary {
+                color: yellow;
+            }
+            .danger {
+                color: red;
+            }
+            .card:nth-child(even) {
+                background-color: rgb(158, 240, 243);
+            }
+            .card:nth-child(odd) {
+                background-color: rgb(241, 171, 192);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1 style="text-align:center">Assignment-4</h1>
+            <% for (let i=0;i<user.length;i++) {%>
+                <div class="card">
+                    <div class="card-item <%= getClass(user[i].isPromoted)%>"><%= user[i].fname %></div>
+                    <div class="card-item <%= getClass(user[i].isPromoted)%>"><%= user[i].email %></div>
+                    <p><form method="POST" action="/user/update/<%= user[i].email %>?_method=PUT" name="_method" value="PUT">
+                        <button id="edit-<%= user[i].name %>" class="prom_btn" type="submit">Promoted/Demoted</button>
+                    </form> 
+                    <form method="POST" action="/user/delete/<%= user[i].email %>?_method=Delete" name="_method" value="DELETE">
+                        <button id="edit-<%= user[i].name %>" class="del_btn" type="submit" >Delete</button>
+                    </form> </p>
+                
+                </div>
+            <% } %>
+            <a href="/form" style="margin-top: 15px;">Add User</a>
+        </div>
+    </body>
+</html>
